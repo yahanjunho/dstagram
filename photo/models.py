@@ -23,7 +23,7 @@ class Photo(models.Model):
         from django.urls import reverse
         return reverse('photo:post_detail', args=[str(self.id)])
     
-        def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):
         is_duplicated = False
         if self.photo:
             try:
